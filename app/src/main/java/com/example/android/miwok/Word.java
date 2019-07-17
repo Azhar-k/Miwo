@@ -18,7 +18,9 @@ public class Word {
     private static final int NO_IMAGE_PROVIDED = -1;
 
     //Music file Id for words
-    private int mAudioResourceId;
+    private int mAudioResourceId=NO_AUDIO_PROVIDED;
+
+    private static final int NO_AUDIO_PROVIDED = -1;
 
     // constructor for the new word object
     public Word(String defaultTranslation, String miwokTranslation,int audioResourceId){
@@ -34,6 +36,11 @@ public class Word {
         mMiwokTranslation = miwokTranslation;
         mImageResourceId = imageResourceId;
         mAudioResourceId = audioResourceId;
+    }
+    public Word(String defaultTranslation, String miwokTranslation){
+        mDefaultTranslation = defaultTranslation;
+        mMiwokTranslation = miwokTranslation;
+
     }
 
     //get the default Translation
@@ -54,6 +61,9 @@ public class Word {
     // check whether image resource id is provided or not
     public boolean hasImage() {
         return mImageResourceId != NO_IMAGE_PROVIDED;
+    }
+    public boolean hasAudio() {
+        return mAudioResourceId != NO_AUDIO_PROVIDED;
     }
 
     //get the audio file resource id

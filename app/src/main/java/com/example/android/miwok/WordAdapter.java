@@ -58,6 +58,11 @@ public class WordAdapter extends ArrayAdapter<Word> {
         else {
             mImageView.setVisibility(View.GONE);
         }
+        ImageView pImageView = (ImageView) listItemView.findViewById(R.id.image_play);
+        if(!word_item.hasAudio())
+        {
+            pImageView.setVisibility(View.GONE);
+        }
 
         //seach for the view with the give id
         View textContainer = listItemView.findViewById(R.id.text_container);

@@ -23,4 +23,5 @@
 
     <!--Text color for tabs-->
     <color name="tab_Default_color">#A8A19E</color>>
+    <color name="def_background">#663B2E</color>
 </resources>
